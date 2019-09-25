@@ -43,3 +43,6 @@ yarn estart
 electron-builder build --win
 electron-builder build --linux
 ```
+## 已打包文件下载
+[Linux lilfile下载](https://lilfile.com/e2Rk2d)
+[Windows lilfile下载](https://lilfile.com/6fBzWi)
