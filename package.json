@@ -1,31 +1,107 @@
 {
-  "name": "amemory",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "adb-memory-monitoring-electron",
+    "version": "0.1.0",
+    "private": true,
+    "main": "build/electron.js",
+    "DEV": true,
+    "dependencies": {
+        "echarts": "^4.3.0",
+        "koa": "^2.8.1",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "react-router-dom": "^5.0.1",
+        "react-scripts": "3.1.1",
+        "react-scrollbar": "^0.5.6"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "export GENERATE_SOURCEMAP=false && react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "estart": "electron ."
+    },
+    "build": {
+        "productName": "adb-memory-monitoring-electron",
+        "appId": "org.sunyuting.ADBMemoryMonitoringElectron",
+        "files": [
+            "build/**/*",
+            "node_modules/**/*"
+        ],
+        "dmg": {
+            "contents": [
+                {
+                    "x": 130,
+                    "y": 220
+                },
+                {
+                    "x": 410,
+                    "y": 220,
+                    "type": "link",
+                    "path": "/Applications"
+                }
+            ]
+        },
+        "win": {
+            "target": [
+                "nsis", "zip"
+            ],
+            "icon": "/home/sun/reactjs/amemory/build/icon256.ico"
+        },
+        "linux": {
+            "target": [
+                "AppImage"
+            ],
+            "category": "Development",
+            "icon": "/home/sun/reactjs/amemory/build/logo.png"
+        },
+        "directories": {
+            "buildResources": "resources",
+            "output": "release"
+        },
+        "publish": {
+            "provider": "github",
+            "owner": "adb-memory-monitoring-electron",
+            "repo": "adb-memory-monitoring-electron",
+            "private": false
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sunyuting83/adb-memory-monitoring-electron.git"
+    },
+    "author": {
+        "name": "ADB Memory Monitoring Electron",
+        "email": "sunyuting83@gmail.com"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sunyuting83/adb-memory-monitoring-electron/issues"
+    },
+    "keywords": [
+        "electron",
+        "react",
+        "adb",
+        "memory",
+        "monitoring"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "homepage": ".",
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "electron": "^6.0.10",
+        "electron-builder": "^21.2.0"
+    }
 }
