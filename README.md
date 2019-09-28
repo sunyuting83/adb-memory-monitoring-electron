@@ -18,8 +18,8 @@
 ## 已知问题
 * 不会用Webpack所以要先给react打包，在用electron-builder打包build目录
 * 打包后文件比较大
-* Mac打包失败
-* 本人新手，欢迎动打包的大神指教
+* ~~Mac打包失败~~
+* 本人新手，欢迎懂打包的大神指教
 * 突然杀死或退出正在监测的应用会导致报错，图表会消失，请先暂停再退出
 
 ## 计划
@@ -44,5 +44,8 @@ electron-builder build --win
 electron-builder build --linux
 ```
 ## 已打包文件下载
-[Linux lilfile下载](https://lilfile.com/e2Rk2d)
-[Windows lilfile下载](https://lilfile.com/6fBzWi)
+* [Linux AppImage lilfile下载](https://lilfile.com/e2Rk2d)
+* [Windows Zip lilfile下载](https://lilfile.com/6fBzWi)
+* [Windows Exe lilfile下载](https://lilfile.com/yP30KT)
+* [Mac Zip lilfile下载](https://lilfile.com/2L5jKQ)
+* [Mac Dmg lilfile下载](https://lilfile.com/GsOXQq)
